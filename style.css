@@ -1,0 +1,153 @@
+:root {
+  --darkBlue: hsl(233, 26%, 24%);
+  --limeGreen: hsl(136, 65%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--grayishBlue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--darkBlue);
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+h2{
+    font-size: 1.9rem;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  padding: 20px 150px;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 111;
+}
+
+
+
+.header .brand {
+  /* width: 150px;  */
+  height: 22px;
+}
+
+.flex {
+  display: flex;
+}
+
+.navContainer ul {
+  gap: 30px;
+}
+
+.navContainer ul li {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainer ul li a {
+}
+
+.navContainer ul li a:hover + .rectangle {
+  background: var(--limeGreen);
+}
+
+.rectangle {
+  position: absolute;
+  background: transparent;
+  display: block;
+  width: 30px;
+  height: 5px;
+  top: 40px;
+  transition: all 0.3s linear;
+}
+
+.requestBtn {
+  all: unset;
+  background: linear-gradient(var(--limeGreen), var(--brightCyan));
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 50px;
+  color: var(--white);
+}
+
+.hero{
+    height: 600px;
+    background:  url("images/bg-intro-desktop.svg") no-repeat;
+    background-size: cover;
+    background-position: 500px -250px;     
+}
+
+
+.heroImg{
+    position: absolute;
+    height: 770px;   
+    width: 600px;  
+    object-fit: cover;  
+    right: 0;
+}
+
+.heroText{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.heroText h1 {
+    font-size: 3rem;
+}
+
+.heroText p {
+    width: 45ch; 
+}
+
+.hero-2{
+    padding-top: 120px;
+    background-color: var(--lightGrayishBlue);
+}
+
+
+/* Helpers */
+.pd-150-xy{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.pd-150-left{
+    padding-left: 150px;
+}
+
+
+
