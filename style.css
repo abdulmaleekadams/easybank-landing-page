@@ -21,6 +21,7 @@
 body ::-webkit-scrollbar,
 html ::-webkit-scrollbar {
   width: 16px;
+  padding-top: 80px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,6 +35,12 @@ html ::-webkit-scrollbar {
   height: 56px;
   border: 4px solid transparent;
   background-clip: content-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -69,15 +76,24 @@ h4 {
   font-size: 1.2rem;
 }
 
+.bg-header {
+  background: var(--white);
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
-  padding: 20px 150px;
-  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 111;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1800px;
 }
 
 .header .brand {
@@ -99,8 +115,6 @@ h4 {
   align-items: center;
   transition: all 0.3s linear;
 }
-
-
 
 .navContainer ul li a:hover + .rectangle {
   background: var(--limeGreen);
@@ -131,7 +145,13 @@ h4 {
 }
 
 .requestBtn:hover {
-opacity: 0.55;
+  opacity: 0.55;
+}
+
+main {
+    width: 100%;
+  min-width: 300px;
+  max-width: 1800px;
 }
 
 .hero {
@@ -139,6 +159,8 @@ opacity: 0.55;
   background: url('images/bg-intro-desktop.svg') no-repeat;
   background-size: cover;
   background-position: 500px -250px;
+  gap: 20px;
+  position: relative;
 }
 
 .heroImg {
@@ -221,13 +243,11 @@ opacity: 0.55;
 
 .article-container article h4 {
   margin: 10px 0;
-  color: var(--darkBlue); 
+  color: var(--darkBlue);
 }
 
-
-
-.article-container article h4:hover{
-    color: var(--limeGreen);
+.article-container article h4:hover {
+  color: var(--limeGreen);
 }
 
 footer {
@@ -236,6 +256,8 @@ footer {
   padding-bottom: 40px;
   width: 100%;
   gap: 20px;
+  min-width: 300px; 
+  max-width: 1800px;
 }
 footer > * {
   width: 25%;
@@ -262,8 +284,8 @@ footer > * {
   color: var(--white);
 }
 
-.footerLinks a:hover{
-    color: var(--limeGreen);
+.footerLinks a:hover {
+  color: var(--limeGreen);
 }
 
 .invitation {
@@ -274,21 +296,21 @@ footer > * {
   gap: 30px;
 }
 
-
-
 .navContainer ul li a,
-.requestBtn, .article-container article h4, .footerLinks a{
+.requestBtn,
+.article-container article h4,
+.footerLinks a {
   transition: all 0.3s linear;
 }
 .attribution {
-    font-size: 11px;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+  font-size: 11px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 /* Helpers */
 .p-120-y {
@@ -302,4 +324,172 @@ footer > * {
 
 .pd-150-left {
   padding-left: 150px;
+}
+
+@media screen and (max-width: 1600px) {
+  .pd-150-xy {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .pd-150-left {
+    padding-left: 90px;
+  }
+}
+
+@media screen and (max-width: 1257px) {
+  .article-container {
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+
+  .article-container article {
+    width: 45%;
+    height: 480px;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+
+  .features section {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .pd-150-xy {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .pd-150-left {
+    padding-left: 50px;
+  }
+  .heroImg {
+    width: 520px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 993px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    }
+    footer > * {
+        width: 100%;
+    }
+
+    .socialBrands{
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .socials{
+        gap: 20px;
+    }
+    .socials img{
+        width: 30px;
+        height: 30px;
+    }
+    .footerLinks{
+        grid-template: 1fr / 1fr;
+        text-align: center;
+        font-size: 1.2rem;
+        gap: 30px; 
+    } 
+
+    .invitation{
+        align-items: center;
+    }
+
+    .invitation .requestBtn{
+        margin: auto;
+    }
+
+}
+@media screen and (max-width: 985px) {
+  .hero {
+    flex-direction: column-reverse;
+    background: transparent;
+    height: auto;
+    padding-bottom: 90px;
+    overflow: hidden;
+  }
+  .heroText {
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+  }
+  .heroText h1,
+  .heroText p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroImg {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    object-fit: contain;
+    background: url('images/bg-intro-mobile.svg') no-repeat;
+    background-position: right -300px;
+    background-size: cover;
+    display: block;
+    object-position: center -50px;
+    scale: 1.2;
+  }
+}
+@media screen and (max-width: 860px) {
+  .heroImg {
+    background-position: right -200px;
+  }
+}
+@media screen and (max-width: 723px) {
+  .heroImg {
+    background-position: right -100px;
+  }
+  .pd-150-xy {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h2 {
+    text-align: center;
+  }
+  h2 + p {
+    text-align: center;
+  }
+
+  .heroImg {
+    height: 500px;
+  }
+  .article-container article {
+    height: 480px;
+  }
+
+  .article-container article,
+  .features section {
+    width: 100%;
+  }
+
+  .features section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 571px) {
+  .heroImg {
+    background-position: right -50px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .heroImg {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .heroImg {
+    scale: 1;
+  }
 }

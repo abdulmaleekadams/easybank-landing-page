@@ -15,36 +15,35 @@
     <title>Frontend Mentor | Easybank landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      
-    </style>
+    <style></style>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header flex">
-      <img src="images/logo.svg" alt="brand logo" class="brand" />
-      <nav class="navContainer">
-        <ul class="flex">
-          <li class="flex">
-            <a href="#home"> Home </a> <span class="rectangle"></span>
-          </li>
-          <li class="flex">
-            <a href="#about"> About </a><span class="rectangle"></span>
-          </li>
-          <li class="flex">
-            <a href="#contact"> Contact </a><span class="rectangle"></span>
-          </li>
-          <li class="flex">
-            <a href="#blog"> Blog </a><span class="rectangle"></span>
-          </li>
-          <li class="flex">
-            <a href="#careers"> Careers </a><span class="rectangle"></span>
-          </li>
-        </ul>
-      </nav>
-      <button type="button" class="requestBtn">Request Invite</button>
-    </header>
-
+    <section class="bg-header flex ">
+      <header class="header flex pd-150-xy">
+        <img src="images/logo.svg" alt="brand logo" class="brand" />
+        <nav class="navContainer">
+          <ul class="flex">
+            <li class="flex">
+              <a href="#home"> Home </a> <span class="rectangle"></span>
+            </li>
+            <li class="flex">
+              <a href="#about"> About </a><span class="rectangle"></span>
+            </li>
+            <li class="flex">
+              <a href="#contact"> Contact </a><span class="rectangle"></span>
+            </li>
+            <li class="flex">
+              <a href="#blog"> Blog </a><span class="rectangle"></span>
+            </li>
+            <li class="flex">
+              <a href="#careers"> Careers </a><span class="rectangle"></span>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="requestBtn">Request Invite</button>
+      </header>
+    </section>
     <main>
       <section class="hero flex">
         <section class="heroText flex pd-150-left">
@@ -120,7 +119,9 @@
           <article>
             <img src="images/image-restaurant.jpg" alt="Restauranr" />
             <p>By Wilson Hutton</p>
-            <h4><a href="#"> Treat yourself without worrying about money </a></h4>
+            <h4>
+              <a href="#"> Treat yourself without worrying about money </a>
+            </h4>
 
             <p>
               Our simple budgeting feature allows you to separate out your
@@ -140,7 +141,9 @@
           <article>
             <img src="images/image-confetti.jpg" alt="Confetti " />
             <p>By Claire Robinson</p>
-            <h4><a href="#"> Our invite-only Beta accounts are now live!</a></h4>
+            <h4>
+              <a href="#"> Our invite-only Beta accounts are now live!</a>
+            </h4>
             <p>
               After a lot of hard work by the whole team, we’re excited to
               launch our closed beta. It’s easy to request an invite through the
@@ -178,7 +181,7 @@
         <a href="#blog">Blog</a>
         <a href="#privacyPolicy">Privacy Policy</a>
       </section>
-      <section class="invitation">
+      <section class="invitation flex">
         <button type="button" class="requestBtn">Request Invite</button>
         <p>© Copyright. All Rights Reserved</p>
       </section>
