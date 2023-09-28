@@ -540,15 +540,14 @@ footer > * {
     display: block;
   }
   .header {
+    /* overflow: hidden; */
     position: relative;
   }
   .header > *:not(.brand, .mobile-menu) {
     position: absolute;
   }
   .navContainer {
-    width: 100%;
     top: 62px;
-    left: 0;
   }
 
   .navContainer ul {
@@ -561,14 +560,16 @@ footer > * {
   .navContainer,
   .requestBtnContainer {
     transform: translateX(100vw);
-    transition: all 0.4s linear;
+    z-index: 11;
+    transition: all 0.2s linear;
+    left: 0;
+    width: 100%;
+    display: none;
   }
 
   .header .requestBtnContainer {
     top: 300px;
-    left: 0;
     margin: 0 auto;
-    width: 100%;
     background: var(--white);
     padding-bottom: 30px;
   }
@@ -585,4 +586,8 @@ footer > * {
 .show {
   display: block !important;
   transform: translateX(0) !important;
+}
+
+.header:has(.show) {
+  /* overflow: hidden; */
 }
